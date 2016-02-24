@@ -1,97 +1,168 @@
-<?php
+	<?php
 
-namespace Controller;
+	namespace Controller;
 
-use \W\Controller\Controller;
-use \W\Manager\UserManager;
-use \DateTime;
+	use \W\Controller\Controller;
+	use \W\Manager\UserManager;
+	use \DateTime;
 
-class AdminController extends Controller
-{
-
-	public function index()
-	{
-		$this->show('admin/index');
-	}
-	public function register()
+	class AdminController extends Controller
 	{
 
-		
-		/*
-		*/
 
-		// affecter une variable à chaque valeur clé
-
-		$gender=trim(htmlentities($_POST['gender']));
-		$email=trim(htmlentities($_POST['email']));
-		$password=trim(htmlentities($_POST['password']));
-		$confirmPassword=trim(htmlentities($_POST['confirmPassword']));
-		// recup role select
-		$role=trim(htmlentities($_POST['role']));
-		$firstname=trim(htmlentities($_POST['firstname']));
-		$lastname=trim(htmlentities($_POST['lastname']));
-		
-		debug($_POST);
-
-		// initialisation d'un tableau d'erreurs
-		$errors = [];
-
-		// Instanciation de UserManager
-		$userManager = new UserManager();
-		$userManager->setTable('users'); // bug du framework mettre le nom de la table 
-
-		// Check de l'email
-
-		if(empty($email)|| (filter_var($email, FILTER_VALIDATE_EMAIL))=== false) {
-			$errors['email']= "Vérifiez votre adresse e-mail.";
-		}
-		elseif ($userManager->emailExists($email)) { //Check en bdd si email existe
-			$errors['email']= "Cette adresse email existe déjà.";
+		public function index()
+		{
+			$this->show('admin/index');
 		}
 
-		// check password
-		if($password != $confirmPassword) {
-			$errors['password']= "Les mots de passe ne sont pas identique.";
+		public function registerSalarie(){
+				/*
+				*/
+				// affecter une variable à chaque valeur clé
+
+					$gender=trim(htmlentities($_POST['gender']));
+					$email=trim(htmlentities($_POST['email']));
+					$password=trim(htmlentities($_POST['password']));
+					$confirmPassword=trim(htmlentities($_POST['confirmPassword']));
+					// recup role select
+					$role=trim(htmlentities($_POST['role']));
+					$firstname=trim(htmlentities($_POST['firstname']));
+					$lastname=trim(htmlentities($_POST['lastname']));
+					
+					debug($_POST);
+
+					// initialisation d'un tableau d'erreurs
+					$errors = [];
+
+					// Instanciation de UserManager
+					$userManager = new UserManager();
+					$userManager->setTable('users'); // bug du framework mettre le nom de la table 
+
+					// Check de l'email
+
+					if(empty($email)|| (filter_var($email, FILTER_VALIDATE_EMAIL))=== false) {
+						$errors['email']= "Vérifiez votre adresse e-mail.";
+					}
+					elseif ($userManager->emailExists($email)) { //Check en bdd si email existe
+						$errors['email']= "Cette adresse email existe déjà.";
+					}
+
+					// check password
+					if($password != $confirmPassword) {
+						$errors['password']= "Les mots de passe ne sont pas identique.";
+					}
+					elseif (strlen($password) <= 6) {
+						$errors['password']= "Votre mot de passe doit faire plus de 6 caractères.";
+					}
+
+					// S'il n'y pas d'erreurs
+					if(empty($errors)) {
+						// Crypter lemot de passe
+						$hashedPassword= password_hash($password, PASSWORD_DEFAULT);
+
+						// Objet DateTime
+						$date = new DateTime();
+						
+
+						// Enregistrement en bdd et renvoie un tableau
+						$resultUser = $userManager->insert([
+							'email'=> $email,
+							'password' => $hashedPassword,
+							// choix sur une liste 
+							'role' => $role,
+							'created_at' => $date->format('Y-m-d H:i:s'),
+							'updated_at' => $date->format('Y-m-d H:i:s')
+
+							]);
+						// debug($resultUser);
+
+						//Teste que le tableau est rempli 
+						if($resultUser){
+							// Authentifier l'utilisateur
+							$authentificationManager = new authentificationManager();
+							$authentificationManager->logUserIn($resultUser);
+
+							// Redirection
+							$this->redirectionToRoute('privateHome');
+						}
+					}
+					else {
+						$this->show('admin/index', ['errors' => $errors]);
+					}		
 		}
-		elseif (strlen($password) <= 6) {
-			$errors['password']= "Votre mot de passe doit faire plus de 6 caractères.";
-		}
+		public function registerEntreprise(){
+				/*
+				*/
+				// affecter une variable à chaque valeur clé
 
-		// S'il n'y pas d'erreurs
-		if(empty($errors)) {
-			// Crypter lemot de passe
-			$hashedPassword= password_hash($password, PASSWORD_DEFAULT);
+					$gender=trim(htmlentities($_POST['gender']));
+					$email=trim(htmlentities($_POST['email']));
+					$password=trim(htmlentities($_POST['password']));
+					$confirmPassword=trim(htmlentities($_POST['confirmPassword']));
+					// recup role select
+					$role=trim(htmlentities($_POST['role']));
+					$firstname=trim(htmlentities($_POST['firstname']));
+					$lastname=trim(htmlentities($_POST['lastname']));
+					
+					debug($_POST);
 
-			// Objet DateTime
-			$date = new DateTime();
-			
+					// initialisation d'un tableau d'erreurs
+					$errors = [];
 
-			// Enregistrement en bdd et renvoie un tableau
-			$resultUser = $userManager->insert([
-				'email'=> $email,
-				'password' => $hashedPassword,
-				// choix sur une liste 
-				'role' => $role,
-				'created_at' => $date->format('Y-m-d H:i:s'),
-				'updated_at' => $date->format('Y-m-d H:i:s')
+					// Instanciation de UserManager
+					$userManager = new UserManager();
+					$userManager->setTable('users'); // bug du framework mettre le nom de la table 
 
-				]);
-			// debug($resultUser);
+					// Check de l'email
 
-			//Teste que le tableau est rempli 
-			if($resultUser){
-				// Authentifier l'utilisateur
-				$authentificationManager = new authentificationManager();
-				$authentificationManager->logUserIn($resultUser);
+					if(empty($email)|| (filter_var($email, FILTER_VALIDATE_EMAIL))=== false) {
+						$errors['email']= "Vérifiez votre adresse e-mail.";
+					}
+					elseif ($userManager->emailExists($email)) { //Check en bdd si email existe
+						$errors['email']= "Cette adresse email existe déjà.";
+					}
 
-				// Redirection
-				$this->redirectionToRoute('privateHome');
-			}
+					// check password
+					if($password != $confirmPassword) {
+						$errors['password']= "Les mots de passe ne sont pas identique.";
+					}
+					elseif (strlen($password) <= 6) {
+						$errors['password']= "Votre mot de passe doit faire plus de 6 caractères.";
+					}
 
+					// S'il n'y pas d'erreurs
+					if(empty($errors)) {
+						// Crypter lemot de passe
+						$hashedPassword= password_hash($password, PASSWORD_DEFAULT);
 
-		}
-		else {
-			$this->show('register/index', ['errors' => $errors]);
+						// Objet DateTime
+						$date = new DateTime();
+						
+
+						// Enregistrement en bdd et renvoie un tableau
+						$resultUser = $userManager->insert([
+							'email'=> $email,
+							'password' => $hashedPassword,
+							// choix sur une liste 
+							'role' => $role,
+							'created_at' => $date->format('Y-m-d H:i:s'),
+							'updated_at' => $date->format('Y-m-d H:i:s')
+
+							]);
+						// debug($resultUser);
+
+						//Teste que le tableau est rempli 
+						if($resultUser){
+							// Authentifier l'utilisateur
+							$authentificationManager = new authentificationManager();
+							$authentificationManager->logUserIn($resultUser);
+
+							// Redirection
+							$this->redirectionToRoute('privateHome');
+						}
+					}
+					else {
+						$this->show('admin/index', ['errors' => $errors]);
+					}		
 		}
 	}
-}
