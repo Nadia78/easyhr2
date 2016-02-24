@@ -52,6 +52,9 @@
 			    <label for="confirmPassword">Password :</label>
 			    <input type="password" class="form-control" id="confirmPassword" name ="confirmPassword" placeholder="Password">
 	  		</div>
+
+	  	
+
 	  			<div class="form-group <?php if(isset($errors['role'])) echo 'has-error' ?>">
 					    <label for="role">role :</label>
 					    <select class="form-control" id="role" name ="role" placeholder="role">
@@ -65,6 +68,7 @@
 						<?php endif; ?>
 					</div>
 	  		<button type="submit" name="salarie" class="btn btn-primary">Submit</button>
+
 		</form>
 	</div>
 </div>
@@ -74,7 +78,9 @@
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
+
 		<form class="form-container" method="POST" action="<?= $this->url('adminSubmit2'); ?>">
+
 
 			<div class="form-group <?php if(isset($errors['name'])) echo 'has-error' ?>">
 				<label for="name">Nom :</label>
@@ -133,7 +139,8 @@
 				<label for="confirmPassword">Confirmer le mot de passe :</label>
 				<input type="password" class="form-control" id="confirmPassword" name ="confirmPassword" placeholder="Password">
 			</div>
-	  		<button type="submit" name="entreprise" class="btn btn-primary">Envoyer</button>
+	  		<button type="submit" class="btn btn-primary">Envoyer</button>
+
 		</form>
 	</div>
 </div>
