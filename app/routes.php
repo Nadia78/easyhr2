@@ -4,6 +4,7 @@
 		['GET', '/', 'Default#home', 'home'],
 		['GET', '/entreprise', 'Entreprise#index', 'entreprise'],
 		['GET', '/salarie', 'Salarie#index', 'salarie'],
+		['GET', '/admin', 'Admin#index', 'admin'],
 
 		['GET', '/login/', 'Login#index', 'login'],
 		['POST', '/loginUser/', 'Login#loginUser', 'loginUser'],
