@@ -15,6 +15,8 @@ class AdminController extends Controller
 	}
 	public function register()
 	{
+
+		
 		/*
 		*/
 
