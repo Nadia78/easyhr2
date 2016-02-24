@@ -30,7 +30,7 @@
 		 		 		<div class="form-group <?php if(isset($errors['lastname'])) echo 'has-error' ?>">
 						    <label for="lastname">Nom :</label>
 						    <input type="lastname" class="form-control" id="lastname" name="lastname" placeholder="lastname" value="">
-						    <?php if(isset($errors['email'])): ?>
+						    <?php if(isset($errors['lastname'])): ?>
 						    	<span class="help-block"><?= $errors['lastname']; ?></span>
 							<?php endif; ?>
 			 		 		</div>

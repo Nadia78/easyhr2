@@ -88,7 +88,7 @@
 
                         <button type="button" id="btnEntrepriseId" class="btn btn-primary btn-lg btn-block" >Vous êtes une entreprise partenaire</button>
                         <div  id="form1" class="form-padding">
-                            <form method="post"  action="#">
+                            <form method="post"  action="<?= $this->url('entreprise'); ?>">
                                 <div class="form-group">
                                     <input type="email" class="form-control" name="" placeholder=" rh@entreprise.com" >
                                     <button  type="submit"  class="btn btn-primary  padding" name="action" value="send" >Envoyer</button>
@@ -99,9 +99,10 @@
                         <button type="button" id="btnSalarieId" class="btn btn-success btn-lg btn-block" >Vous êtes salarié d'une entreprise partenaire</button>
 
                         <div  id="form2" class="form-padding">
-                            <form method="post"  action="#">
+                            <form method="post"  action="<?= $this->url('salarie2'); ?>">
                                 <div class="form-group ">
                                     <input type="email" class="form-control " name="" placeholder="salarie@entreprise.com" >
+                                    <input type="text" class="form-control " name="" placeholder="mot de passe">
                                     <button type="submit"  class="btn btn-primary padding" name="action" value="send" >Envoyer</button>
                                 </div>
                             </form>

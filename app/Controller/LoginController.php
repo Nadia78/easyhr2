@@ -56,7 +56,7 @@ class LoginController extends Controller
 
 		// redirection
 
-		$this->redirectToRoute('home');
+		$this->redirectToRoute('salarie');
 		
 	}
 }
