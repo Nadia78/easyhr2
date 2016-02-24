@@ -139,20 +139,11 @@
 				<label for="confirmPassword">Confirmer le mot de passe :</label>
 				<input type="password" class="form-control" id="confirmPassword" name ="confirmPassword" placeholder="Password">
 			</div>
-<<<<<<< HEAD
 	  		<button type="submit" class="btn btn-primary">Envoyer</button>
-=======
-	  		<button type="submit" name="entreprise" class="btn btn-primary">Envoyer</button>
->>>>>>> origin/master
+
 		</form>
 	</div>
 </div>
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/master
 <?php $this->stop('main_content') ?>
