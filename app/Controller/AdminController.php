@@ -13,17 +13,23 @@ class AdminController extends Controller
 	{
 		$this->show('admin/index');
 	}
-	public function registerUser()
+	public function register()
 	{
 		/*
 		*/
 
 		// affecter une variable à chaque valeur clé
+
+		$gender=trim(htmlentities($_POST['gender']));
 		$email=trim(htmlentities($_POST['email']));
 		$password=trim(htmlentities($_POST['password']));
 		$confirmPassword=trim(htmlentities($_POST['confirmPassword']));
 		// recup role select
 		$role=trim(htmlentities($_POST['role']));
+		$firstname=trim(htmlentities($_POST['firstname']));
+		$lastname=trim(htmlentities($_POST['lastname']));
+		
+		debug($_POST);
 
 		// initialisation d'un tableau d'erreurs
 		$errors = [];

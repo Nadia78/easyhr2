@@ -7,7 +7,7 @@
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<form class="form-container" method="POST" action="<?= $this->url('registerUser'); ?>">
+		<form class="form-container" method="POST" action="<?= $this->url('adminSubmit'); ?>">
 		  	<div class="form-group <?php if(isset($errors['gender'])) echo 'has-error' ?>">
 			    <label for="gender">Civilité :</label>
 			    <input type="gender" class="form-control" id="gender" name="gender" placeholder="gender" value="">

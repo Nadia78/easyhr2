@@ -5,6 +5,7 @@
 		['GET', '/entreprise', 'Entreprise#index', 'entreprise'],
 		['GET', '/salarie', 'Salarie#index', 'salarie'],
 		['GET', '/admin', 'Admin#index', 'admin'],
+		['POST', '/adminSubmit', 'Admin#register', 'adminSubmit'],
 
 		['GET', '/login/', 'Login#index', 'login'],
 		['POST', '/loginUser/', 'Login#loginUser', 'loginUser'],
