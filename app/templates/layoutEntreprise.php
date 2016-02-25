@@ -73,14 +73,6 @@
 							<li><a href="#">Notif 2</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Partenaires</a>
-						<ul>
-							<li><a href="#">Interim</a></li>
-							<li><a href="#">Cabinet de recrutement</a></li>
-							<li><a href="#">Pôle emploi</a></li>
-							<li><a href="#">Partenaire 4</a></li>
-						</ul>
-					</li>
 				</ul>
 			</div>
 		</div>
