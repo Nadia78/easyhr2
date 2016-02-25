@@ -95,7 +95,7 @@
                         <div  id="form1" class="form-padding">
                             <form method="post"  action="<?= $this->url('loginEntreprise'); ?>">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="" placeholder=" rh@entreprise.com" >
+                                    <input type="email" class="form-control" name="email" placeholder=" rh@entreprise.com" >
                                     <input type="password" class="form-control " name="password" placeholder="mot de passe">
 
                                     <button  type="submit"  class="btn btn-primary  padding" name="action" value="send" >Envoyer</button>
@@ -108,7 +108,7 @@
                         <div  id="form2" class="form-padding">
                             <form method="post"  action="<?= $this->url('loginSalarie'); ?>">
                                 <div class="form-group ">
-                                    <input type="email" class="form-control " name="" placeholder="salarie@entreprise.com" >
+                                    <input type="email" class="form-control " name="email" placeholder="salarie@entreprise.com" >
                                     <input type="password" class="form-control " name="password" placeholder="mot de passe">
                                     <button type="submit"  class="btn btn-success padding" name="action" value="send" >Envoyer</button>
                                 </div>

@@ -34,10 +34,21 @@ class LoginController extends Controller
 			//
 			if ($authentificationManager->isValidLoginInfo($email, $password)) {
 				$authentificationManager->logUserIn($resultUser);
-				debug($resultUser);
-				die();
+
+				// debug($resultUser);
+				// die();
 				// Redirection
-				$this->redirectToRoute('salarie');
+				if ($resultUser['role'] == 'admin'){
+					$this->redirectToRoute('admin');
+					
+				}
+				elseif ($resultUser['role'] == 'entreprise'){
+					$this->redirectToRoute('entreprise');
+					
+				}
+				else{
+					$this->redirectToRoute('salarie');
+				}
 			}
 			else {
 				$errors['login'] = "Wrong password";
@@ -58,7 +69,7 @@ class LoginController extends Controller
 
 		// redirection
 
-		$this->redirectToRoute('salarie');
+		$this->redirectToRoute('home');
 		
 	}
 }

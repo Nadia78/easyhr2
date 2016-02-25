@@ -16,7 +16,7 @@ class AdminController extends Controller
 		$this->show('admin/index');
 	}
 
-	public function registerSalarie(){
+	public function register(){
 
 		// affecter une variable à chaque valeur clé
 		$gender=trim(htmlentities($_POST['gender']));
@@ -85,7 +85,7 @@ class AdminController extends Controller
 				$authentificationManager->logUserIn($resultUser);
 
 				// Redirection
-				$this->redirectToRoute('salarie');
+				$this->redirectToRoute('admin');
 			}
 		}
 		else {

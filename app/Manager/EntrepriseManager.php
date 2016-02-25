@@ -2,6 +2,8 @@
 
 namespace Manager;
 
+use W\Manager\ConnectionManager;
+
 class EntrepriseManager extends \W\Manager\Manager {
 
 	public function emailExists($email){
@@ -27,9 +29,9 @@ class EntrepriseManager extends \W\Manager\Manager {
 
 
 		$dbh = ConnectionManager::getDbh();
-		$sql = "SELECT * FROM entreprises WHERE name = :username OR email = :email LIMIT 1";
+		$sql = "SELECT * FROM entreprises WHERE email = :email LIMIT 1";
 		$sth = $dbh->prepare($sql);
-		$sth->bindValue(":username", $usernameOrEmail);
+		
 		$sth->bindValue(":email", $usernameOrEmail);
 		if ($sth->execute()){
 			$foundUser = $sth->fetch();
@@ -41,4 +43,22 @@ class EntrepriseManager extends \W\Manager\Manager {
 		return false;
 	}
 
+	public function isValidLoginInfo($usernameOrEmail, $plainPassword)
+	{
+
+		
+
+		
+		$usernameOrEmail = strip_tags(trim($usernameOrEmail));
+		$foundEntreprise = $this->getEntrepriseByUsernameOrEmail($usernameOrEmail);
+		if (!$foundUser){
+			return 0;
+		}
+
+		if (password_verify($plainPassword, $foundUser[$app->getConfig('security_password_property')])){
+			return (int) $foundUser[$app->getConfig('security_id_property')];
+		}
+
+		return 0;
+	}
 }
