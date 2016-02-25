@@ -8,5 +8,5 @@ namespace Manager;
  */
 class EntrepriseManager extends \W\Manager\Manager 
 {
-	
-}
+
+	}

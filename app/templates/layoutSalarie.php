@@ -17,6 +17,14 @@
     	    <!-- CSS espaceSalarie -->
     	
     	    <link rel="stylesheet" href="<?= $this->assetUrl('css/espaceSalarie.css') ?>">
+
+		    <link rel="stylesheet" href="<?= $this->assetUrl('https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.css') ?>">	
+			<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.css' />
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
+			<script src="<?= $this->assetUrl('js/main.js') ?>"></script>
+    	    <link rel="stylesheet" href="<?= $this->assetUrl('css/main.css') ?>">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,9 +33,10 @@
     <![endif]-->
 
 </head>
+
 <div class="page-header">
 		<img src="#">
-	  <p>$Nom, bienvenue dans votre espace EasyHr</p>
+	
 	</div>
 
 	<div class="container">
@@ -38,39 +47,34 @@
 				<ul id="menu-demo2">
 					<li><a href="#">Demande Specifique</a>
 						<ul>
-							<li><a href="#">Ancienne Fiche de Paie</a></li>
-							<li><a href="#">Compte rendu de réunion</a></li>
-							<li><a href="#">etc.. </a></li>
-							
+							<li><a href="#">Notifications</a></li>				
 						</ul>
 					</li>
-					<li><a href="#">Formation</a>
-						<ul>
-							<li><a href="#">Formation 1</a></li>
-							<li><a href="#">Formation 2</a></li>
-							<li><a href="#">Formation 3</a></li>
-						</ul>
+					<li><a href="#">Gestion du temps</a>
+
 					</li>
 					<li><a href="#">Documents</a>
 						<ul>
-							<li><a href="#">Doc 1</a></li>
-							<li><a href="#">Doc 2</a></li>
-							<li><a href="#">Doc 3</a></li>
-							
+							<li><a href="#">Fiches de paie</a></li>
+							<li><a href="#">Attestation fiscal</a></li>
+							<li><a href="#">Mutuelle</a></li>
 						</ul>
 					</li>
-					<li>
-						<a href="#">Notifications</a>						
+					<li><a href="#">Formations</a>
+						<ul>
+							<li><a href="#">DIF/CIF</a></li>
+							<li><a href="#">Catalogue de formations</a></li>
+						</ul>						
 					</li>
-
-					
-				</ul>
+				</ul>		
+				</div>	
 			</div>
 		</div>
-	</div>
+		</div>
+		<div id='calendar'>
+		</div>
 
-
-
+<?= $this->section('main_content') ?>
 
 </body>
 </html>

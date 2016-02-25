@@ -91,6 +91,7 @@
                             <form method="post"  action="<?= $this->url('entreprise'); ?>">
                                 <div class="form-group">
                                     <input type="email" class="form-control" name="" placeholder=" rh@entreprise.com" >
+                                    <input type="password" class="form-control " name="" placeholder="mot de passe">
                                     <button  type="submit"  class="btn btn-primary  padding" name="action" value="send" >Envoyer</button>
                                 </div>
                             </form>
@@ -102,7 +103,7 @@
                             <form method="post"  action="<?= $this->url('salarie2'); ?>">
                                 <div class="form-group ">
                                     <input type="email" class="form-control " name="" placeholder="salarie@entreprise.com" >
-                                    <input type="text" class="form-control " name="" placeholder="mot de passe">
+                                    <input type="password" class="form-control " name="" placeholder="mot de passe">
                                     <button type="submit"  class="btn btn-primary padding" name="action" value="send" >Envoyer</button>
                                 </div>
                             </form>

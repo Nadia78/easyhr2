@@ -25,17 +25,14 @@
 	<!-- <link rel='stylesheet' href='fullcalendar/fullcalendar.css' /> -->
 	<link rel="stylesheet" href="<?= $this->assetUrl('https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.css') ?>">
 	
-	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.css' /> -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.css' />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
 	<script src="<?= $this->assetUrl('js/main.js') ?>"></script>
 
-	<link rel="stylesheet" href="<?= $this->assetUrl('main.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/main.css') ?>">
 
-	<!-- <script src='lib/jquery.min.js'></script>
-	<script src='lib/moment.min.js'></script> -->
-	<!-- <script src='fullcalendar/fullcalendar.js'></script> -->
 </head>
 <body>
 	<div class="page-header">
@@ -51,42 +48,36 @@
 				<ul id="menu-demo2">
 					<li><a href="#">General</a>
 						<ul>
-							<li><a href="#">Département 1</a></li>
-							<li><a href="#">Département 2</a></li>
-							<li><a href="#">Département 3 </a></li>
-							<li><a href="#">Département 4</a></li>
+							<li><a href="#">Commercial</a></li>
+							<li><a href="#">Informatique</a></li>
+							<li><a href="#">RH</a></li>
 						</ul>
 					</li>
 					<li><a href="#">Personnel</a>
 						<ul>
-							<li><a href="#">Entree</a></li>
-							<li><a href="#">Sortie</a></li>
-							<li><a href="#">Effectif</a></li>
+							<li><a href="#">Effectifs</a></li>
+							<li><a href="#">Entrées</a></li>
+							<li><a href="#">Sorties</a></li>
 						</ul>
 					</li>
 					<li><a href="#">Documents</a>
 						<ul>
-							<li><a href="#">Doc 1</a></li>
-							<li><a href="#">Doc 2</a></li>
-							<li><a href="#">Doc 3</a></li>
-							
+							<li><a href="#">Social</a></li>
+							<li><a href="#">Fiscal</a></li>
+							<li><a href="#">Mutuelle/Retraite/PEE</a></li>		
 						</ul>
 					</li>
 					<li><a href="#">Notifications</a>
-						<ul>
-							
+						<ul>		
 							<li><a href="#">Notif 1</a></li>
 							<li><a href="#">Notif 2</a></li>
-							<li><a href="#">Notif 3</a></li>
-							<li><a href="#">Notif 4</a></li>
 						</ul>
 					</li>
-
 					<li><a href="#">Partenaires</a>
 						<ul>
-							<li><a href="#">Partenaire 1</a></li>
-							<li><a href="#">Partenaire 2</a></li>
-							<li><a href="#">Partenaire 3</a></li>
+							<li><a href="#">Interim</a></li>
+							<li><a href="#">Cabinet de recrutement</a></li>
+							<li><a href="#">Pôle emploi</a></li>
 							<li><a href="#">Partenaire 4</a></li>
 						</ul>
 					</li>

@@ -34,8 +34,10 @@ class LoginController extends Controller
 			//
 			if ($authentificationManager->isValidLoginInfo($email, $password)) {
 				$authentificationManager->logUserIn($resultUser);
+				debug($resultUser);
+				die();
 				// Redirection
-				$this->redirectToRoute('privateHome');
+				$this->redirectToRoute('salarie');
 			}
 			else {
 				$errors['login'] = "Wrong password";
