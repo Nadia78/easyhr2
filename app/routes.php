@@ -6,12 +6,16 @@
 		['GET', '/salarie', 'Salarie#index', 'salarie'],
 		['GET', '/admin', 'Admin#index', 'admin'],
 
+		['POST', '/loginEntreprise', 'Entreprise#loginEntreprise', 'loginEntreprise'],
+		['POST', '/loginSalarie', 'Salarie#loginUser', 'loginSalarie'],
+		
+
 		['POST', '/adminSubmitSalarie', 'Admin#registerSalarie', 'adminSubmit1'],
 		['POST', '/adminSubmitEntreprise', 'Admin#registerEntreprise', 'adminSubmit2'],
 
 		['POST', '/salarie', 'Salarie#index', 'salarie2'],
 
-		['GET', '/login/', 'Login#index', 'login'],
+		
 		['POST', '/loginUser/', 'Login#loginUser', 'loginUser'],
 		['GET', '/logout/', 'Login#logout', 'logout'],
 

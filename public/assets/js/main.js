@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	$('#btnEntrepriseId').click(function() {
 		
-		$('#form1').toggle();
+		$('#form1').toggle('slow');
 	});
 	$('#btnSalarieId').click(function() {
-		$('#form2').toggle();
+		$('#form2').toggle('slow');
 	});		
 
 	$('#calendar').fullCalendar({
