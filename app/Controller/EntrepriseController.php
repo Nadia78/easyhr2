@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Manager\EntrepriseManager;
 use \W\Manager\userManager;
 use \W\Security\AuthentificationManager;
 
@@ -14,7 +15,7 @@ class EntrepriseController extends Controller
 		$this->show('entreprise/index');
 	}
 
-	public function loginEntreprise() {
+	public function loginUSE() {
 
 		// affecter une variable à chaque valeur clé
 		$email=trim(htmlentities($_POST['email']));
@@ -35,7 +36,7 @@ class EntrepriseController extends Controller
 			if ($authentificationManager->isValidLoginInfo($email, $password)) {
 				$authentificationManager->logUserIn($resultUser);
 				// Redirection
-				$this->redirectToRoute('privateHome');
+				$this->redirectToRoute('entreprise');
 			}
 			else {
 				$errors['login'] = "Wrong password";

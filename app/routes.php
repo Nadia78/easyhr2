@@ -5,12 +5,14 @@
 		['GET', '/entreprise', 'Entreprise#index', 'entreprise'],
 		['GET', '/salarie', 'Salarie#index', 'salarie'],
 		['GET', '/admin', 'Admin#index', 'admin'],
+		['GET', '/insertSalarie', 'Admin#index', 'insertSalarie'],
+		['GET', '/insertEntreprise', 'Admin#index', 'insertEntreprise'],
 
 		['POST', '/loginEntreprise', 'Entreprise#loginEntreprise', 'loginEntreprise'],
 		['POST', '/loginSalarie', 'Salarie#loginUser', 'loginSalarie'],
 		
 
-		['POST', '/adminSubmitSalarie', 'Admin#registerSalarie', 'adminSubmit1'],
+		['POST', '/adminSubmit', 'Admin#register', 'adminSubmit1'],
 		['POST', '/adminSubmitEntreprise', 'Admin#registerEntreprise', 'adminSubmit2'],
 
 		['POST', '/salarie', 'Salarie#index', 'salarie2'],
