@@ -10,8 +10,18 @@ class SalarieController extends Controller
 {
 
 	public function index()
-	{
-		$this->show('salarie/index');
+	{  	
+		$user=$this->getUser();
+		echo $user['id'];
+
+		$dir    = __DIR__.'/../../dropbox/'. $user['id'];
+		$files = scandir($dir);
+		
+		// print_r($files);
+	
+		
+
+		$this->show('salarie/index', ['files'=>$files]);
 	}
 
 	public function loginUser() {
