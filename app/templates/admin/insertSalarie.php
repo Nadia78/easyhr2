@@ -48,25 +48,41 @@
 					    	<span class="help-block"><?= $errors['password']; ?></span>
 						<?php endif; ?>
 			  		</div>
-	  		<div class="form-group">
-			    <label for="confirmPassword">Password :</label>
-			    <input type="password" class="form-control" id="confirmPassword" name ="confirmPassword" placeholder="Password">
-	  		</div>
 
-	  	
+					<div class="form-group">
+						<label for="confirmPassword">Password :</label>
+						<input type="password" class="form-control" id="confirmPassword" name ="confirmPassword" placeholder="Password">
+					</div>
 
-	  			<div class="form-group <?php if(isset($errors['role'])) echo 'has-error' ?>">
-					    <label for="role">role :</label>
-					    <select class="form-control" id="role" name ="role" placeholder="role">
-						    <option value="salarie">Salarie</option>
-						    <option value="entreprise" >Entreprise</option> 
-   						   <option value="admin">Admin</option>
-   						</select>
-   						<br>
-					    <?php if(isset($errors['role'])): ?>
-					    	<span class="help-block"><?= $errors['role']; ?></span>
+
+
+					<div class="form-group <?php if(isset($errors['role'])) echo 'has-error' ?>">
+						<label for="role">role :</label>
+						<select class="form-control" id="role" name ="role" placeholder="role">
+							<option value="salarie">Salarie</option>
+							<option value="entreprise" >Entreprise</option> 
+							<option value="admin">Admin</option>
+						</select>
+						<br>
+						<?php if(isset($errors['role'])): ?>
+							<span class="help-block"><?= $errors['role']; ?></span>
 						<?php endif; ?>
 					</div>
+					<div class="form-group <?php if(isset($errors['role'])) echo 'has-error' ?>">
+						<label for="role">entreprise :</label>
+						<select class="form-control" id="role" name ="role" placeholder="role">
+							<?php foreach ($variable as $key => $value) {}?>
+
+								<option value=""></option>
+							<?php?>
+							
+						</select>
+					
+						<?php if(isset($errors['role'])): ?>
+							<span class="help-block"><?= $errors['role']; ?></span>
+						<?php endif; ?>
+					</div>
+
 	  		<button type="submit" name="salarie" class="btn btn-primary">Submit</button>
 
 		</form>

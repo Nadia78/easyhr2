@@ -50,6 +50,7 @@
 					</li>
 				</ul>
 			</div>
+				<a href="<?= 'logout'?>">Déconexion</a>
 		</div>
 	</div>
 

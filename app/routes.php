@@ -9,7 +9,7 @@
 		['GET', '/insertEntreprise', 'Admin#index', 'insertEntreprise'],
 
 		['POST', '/loginEntreprise', 'Entreprise#loginEntreprise', 'loginEntreprise'],
-		['POST', '/loginSalarie', 'Salarie#loginUser', 'loginSalarie'],
+		['POST', '/loginSalarie', 'Login#loginUser', 'loginSalarie'],
 		
 
 		['POST', '/adminSubmit', 'Admin#register', 'adminSubmit1'],

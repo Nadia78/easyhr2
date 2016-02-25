@@ -34,9 +34,8 @@
 
 </head>
 
-<div class="page-header">
+	<div class="page-header">
 		<img src="#">
-	
 	</div>
 
 	<div class="container">
@@ -66,10 +65,11 @@
 							<li><a href="#">Catalogue de formations</a></li>
 						</ul>						
 					</li>
-				</ul>		
-				</div>	
-			</div>
+				</ul>	
+			</div>	
+				<a href="<?= 'logout'?>">Déconexion</a>	
 		</div>
+	</div>
 		</div>
 		<div id='calendar'>
 		</div>

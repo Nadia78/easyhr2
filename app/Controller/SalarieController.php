@@ -35,7 +35,7 @@ class SalarieController extends Controller
 			if ($authentificationManager->isValidLoginInfo($email, $password)) {
 				$authentificationManager->logUserIn($resultUser);
 				// Redirection
-				$this->redirectToRoute('salarie/index');
+				$this->redirectToRoute('salarie');
 			}
 			else {
 				$errors['login'] = "Wrong password";
