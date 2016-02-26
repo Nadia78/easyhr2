@@ -8,7 +8,7 @@
 		['GET', '/insertSalarie', 'Admin#index', 'insertSalarie'],
 		['GET', '/insertEntreprise', 'Admin#index', 'insertEntreprise'],
 
-		['POST', '/loginEntreprise', 'Entreprise#loginEntreprise', 'loginEntreprise'],
+		['POST', '/loginEntreprise', 'Login#loginUser', 'loginEntreprise'],
 		['POST', '/loginSalarie', 'Login#loginUser', 'loginSalarie'],
 		
 
