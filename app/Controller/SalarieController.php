@@ -12,7 +12,7 @@ class SalarieController extends Controller
 	public function index()
 	{  	
 		$user=$this->getUser();
-		echo $user['id'];
+		print_r($user) ;
 
 		$dir    = __DIR__.'/../../dropbox/'. $user['id'];
 		$files = scandir($dir);
@@ -59,14 +59,5 @@ class SalarieController extends Controller
 		$this->show('home', ['errors' => $errors]);
 	}
 	
-	public function logout(){
-		//
-		$authentificationManager= new AuthentificationManager();
-		$authentificationManager->logUserOut($resultUser);
-
-		// redirection
-
-		$this->redirectToRoute('home');
-		
-	}
+	
 }
