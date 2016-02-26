@@ -25,11 +25,31 @@
 		<button>Envoyer</button>
 		</form>
 
+	<h3>Ci-dessous la liste de vos documents </h3>
+<?php
+$dir    = '__DIR__."/../../dropbox"';
+$files1 = scandir($dir);
+$dir2 = '__DIR__."/../../dropbox/1"';
+$files2 = scandir($dir2);
+// = scandir($dir, 1);
 
 
+print_r($files2);
+//if($w_user['id']== $key)
+foreach ($files1 as $key => $value):?>
+<a href="<?= $dir; ?>">
+
+<?php 
+echo '<br>';
+echo $value; 
+echo '</br>';?>
+</a>
+<?php endforeach; 
+//endif;
+?>
 
 
-	</p>
+</p>
 	
 </div>
 <?php $this->stop('main_content') ?>

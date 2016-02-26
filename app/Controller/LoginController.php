@@ -28,27 +28,17 @@ class LoginController extends Controller
 
 		$resultUser = $userManager->getUserByUsernameOrEmail($email);
 
-		if($resultUser){
+		if($resultUser
+			){
 			//Instanciation d'un objet de type Authentification
 			$authentificationManager= new AuthentificationManager();
 			//
 			if ($authentificationManager->isValidLoginInfo($email, $password)) {
 				$authentificationManager->logUserIn($resultUser);
-
-				// debug($resultUser);
-				// die();
+				debug($resultUser);
+				die();
 				// Redirection
-				if ($resultUser['role'] == 'admin'){
-					$this->redirectToRoute('admin');
-					
-				}
-				elseif ($resultUser['role'] == 'entreprise'){
-					$this->redirectToRoute('entreprise');
-					
-				}
-				else{
-					$this->redirectToRoute('salarie');
-				}
+				$this->redirectToRoute('salarie');
 			}
 			else {
 				$errors['login'] = "Wrong password";
@@ -69,7 +59,7 @@ class LoginController extends Controller
 
 		// redirection
 
-		$this->redirectToRoute('home');
+		$this->redirectToRoute('salarie');
 		
 	}
 }

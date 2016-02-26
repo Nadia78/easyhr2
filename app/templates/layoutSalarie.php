@@ -1,19 +1,10 @@
-<?php
-$dir    = '/dropbox';
-$files1 = scandir($dir);
-$files2 = scandir($dir, 1);
-
-print_r($files1);
-print_r($files2);
-?>
-
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Espace Salarié</title>
 
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
@@ -77,7 +68,7 @@ print_r($files2);
 					</li>
 				</ul>	
 			</div>	
-				<a href="<?= 'logout'?>">Déconexion</a>	
+				<a href="<?= 'logout'?>">Déconnexion</a>	
 		</div>
 	</div>
 		</div>
