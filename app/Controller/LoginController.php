@@ -51,15 +51,17 @@ class LoginController extends Controller
 		//
 		$this->show('login/index', ['errors' => $errors]);
 	}
-		public function logout()
-	{
-		//
-		$authentificationManager= new AuthentificationManager();
-		$authentificationManager->logUserOut($resultUser);
+	
+	public function logout(){
+	//
+	$authentificationManager= new AuthentificationManager();
 
-		// redirection
+	$authentificationManager->logUserOut($resultUser);
+	// redirection
 
-		$this->redirectToRoute('salarie');
+
+	$this->redirectToRoute('home');
+
 		
 	}
 }

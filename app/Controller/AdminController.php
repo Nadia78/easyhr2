@@ -15,6 +15,14 @@ class AdminController extends Controller
 	{
 		$this->show('admin/index');
 	}
+	public function index1()
+	{
+		$this->show('admin/insertSalarie');
+	}
+	public function index2()
+	{
+		$this->show('admin/insertEntreprise');
+	}
 
 	public function register(){
 

@@ -19,6 +19,10 @@
 				
 				<ul id="menu-demo2">
 					<li><a href="#">Insertion</a>
+						<ul>
+							<li><a href="<?= $this->url('insertSalarie');?>">Salarié</a></li>
+							<li><a href="<?= $this->url('insertEntreprise');?>">Entreprise</a></li>
+						</ul>
 
 					</li>
 					<li><a href="#">Informations générales</a>
@@ -50,7 +54,7 @@
 					</li>
 				</ul>
 			</div>
-				<a href="<?= 'logout'?>">Déconexion</a>
+				<a href="<?= $this->url('logout');?>">Déconexion</a>
 		</div>
 	</div>
 
