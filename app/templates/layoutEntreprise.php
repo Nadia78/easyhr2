@@ -36,8 +36,8 @@
 </head>
 <body>
 	<div class="page-header">
-		<img src="#">
-	  <p>Bienvenue dans l'espace $nom de l'entreprise de EasyHr</p>
+		
+	  <h3>Bienvenue dans l'espace $nom de l'entreprise de EasyHr<img src="#"></h3>
 	</div>
 
 	<div class="container">
@@ -77,29 +77,8 @@
 			</div>
 			<a href="<?= $this->url('logout');?>">Déconnexion</a>
 		</div>
-		<div id="table">
-			<TABLE BORDER="1"> 
-			  <CAPTION> Informations générales </CAPTION> 
-			  <TR> 
-			 <TH> Noms </TH> 
-			 <TH> Montant du salaire Brut</TH> 
-			 <TH> Absences du mois</TH> 
-			 <TH> Motif </TH> 
-			  </TR> 
-			  <TR> 
-			  <!-- echo $nom -->
-			 <TD> Mr François DUPONT </TD> 
-			 <TD> 2000 € </TD> 
-			 <TD> 1 </TD> 
-			 <TD> Arrêt Maladie </TD> 
-			  </TR> 
-			</TABLE> 
-
-				</div>
-				</div>
-			<div id='calendar'>
-			</div>
-
-
+		</div>
+		<div id='calendar'>
+</div>
 </body>
 </html>
