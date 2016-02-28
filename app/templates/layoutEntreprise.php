@@ -77,27 +77,29 @@
 			</div>
 			<a href="<?= $this->url('logout');?>">Déconnexion</a>
 		</div>
-	</div>
+		<div id="table">
+			<TABLE BORDER="1"> 
+			  <CAPTION> Informations générales </CAPTION> 
+			  <TR> 
+			 <TH> Noms </TH> 
+			 <TH> Montant du salaire Brut</TH> 
+			 <TH> Absences du mois</TH> 
+			 <TH> Motif </TH> 
+			  </TR> 
+			  <TR> 
+			  <!-- echo $nom -->
+			 <TD> Mr François DUPONT </TD> 
+			 <TD> 2000 € </TD> 
+			 <TD> 1 </TD> 
+			 <TD> Arrêt Maladie </TD> 
+			  </TR> 
+			</TABLE> 
 
-<div id="table">
-<TABLE BORDER="1"> 
-  <CAPTION> Informations générales </CAPTION> 
-  <TR> 
- <TH> Noms </TH> 
- <TH> Montant du salaire Brut</TH> 
- <TH> Absences du mois</TH> 
- <TH> Motif </TH> 
-  </TR> 
-  <TR> 
-  <!-- echo $nom -->
- <TD> Mr François DUPONT </TD> 
- <TD> 2000 € </TD> 
- <TD> 1 </TD> 
- <TD> Arrêt Maladie </TD> 
-  </TR> 
-</TABLE> 
-</div>
-<div id='calendar'>
-</div>
+				</div>
+				</div>
+			<div id='calendar'>
+			</div>
+
+
 </body>
 </html>
