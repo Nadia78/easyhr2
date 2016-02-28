@@ -12,7 +12,7 @@ class SalarieController extends Controller
 	public function index()
 	{  	
 		$user=$this->getUser();
-		print_r($user) ;
+		//print_r($user) ;
 		$this->show('salarie/index');
 	}
 
