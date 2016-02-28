@@ -6,19 +6,30 @@
 
 
 <?php $this->start('main_content') ?>
+
 	<div class="container">
 
 		<div class="row">
 			<div class="col-md-9 col-md-offset-4">
-				
-		<h1>Bienvenue <?= $this->e($w_user['genre'])?> <?= $this->e($w_user['firstname'])?> sur votre espace Easyhr</h1>
 
-		<p>
-			Il vous reste :<br>
+		<h3>Ci-dessous le solde de vos congés :</h3>
+						
 
-				-$numberCG  jours de congés payées.<br>
-				-$numberRTT jours de RTT.<br>
-				-numberF heures de formation.<br></p>
+
+		
+		<div>	
+		
+		<ul>
+				<li>$numberCG  jours de congés payées.</li>
+				<li>$numberRTT jours de RTT.</li>
+				<li>numberF heures de formation.</li>
+
+		</ul>
+
+		
+		<div>
+
+		<h3>Renseignez vos prises de congés et absences ci-dessous :</h3>
 
 			<select>
 				<option value ="CP">CP</option>
@@ -32,7 +43,7 @@
 			<button>Envoyer</button>
 			</form>
 	
-		<h2>Ci-dessous la liste de vos documents </h2>
+		<h3>Ci-dessous la liste de vos documents </h3>
 	<?php
 	$id=$w_user['id'];
 	$dir    = '__DIR__."/../../dropbox"';

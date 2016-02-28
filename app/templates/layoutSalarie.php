@@ -36,7 +36,8 @@
 </head>
 
 	<div class="page-header">
-		<img src="#">
+		
+	<h3>Bienvenue <?= $this->e($w_user['genre'])?> <?= $this->e($w_user['firstname'])?> sur votre espace Easyhr<img src="#"></h3>
 	</div>
 
 	<div class="container">
