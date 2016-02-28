@@ -7,7 +7,8 @@
 		['GET', '/admin', 'Admin#index', 'admin'],
 		['GET', '/insertSalarie', 'Admin#index', 'insertSalarie'],
 		['GET', '/insertEntreprise', 'Admin#index', 'insertEntreprise'],
-		['GET', '/dropbox/[:id]', 'Salarie#index', 'dropbox'],
+
+		['GET', '/dropbox/[:id]', 'Salarie#index2', 'dropbox'],
 
 		['POST', '/loginEntreprise', 'Login#loginUser', 'loginEntreprise'],
 		['POST', '/loginSalarie', 'Login#loginUser', 'loginSalarie'],

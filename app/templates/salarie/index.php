@@ -1,7 +1,7 @@
-<?php $this->layout('layoutSalarie', [
+<?php $this->layout('layoutSalarie')
 //'title' => 'Salarie'],
 //['files'=> $files];
-]) ?>
+?>
 
 
 
@@ -13,10 +13,7 @@
 			<div class="col-md-9 col-md-offset-4">
 
 		<h3>Ci-dessous le solde de vos congés :</h3>
-						
 
-
-		
 		<div>	
 		
 		<ul>
@@ -28,7 +25,7 @@
 
 		
 		<div>
-
+		<div>
 		<h3>Renseignez vos prises de congés et absences ci-dessous :</h3>
 
 			<select>
@@ -42,28 +39,23 @@
 			<input type="date" name="" value="" id="">
 			<button>Envoyer</button>
 			</form>
+		</div>
 	
 		<h3>Ci-dessous la liste de vos documents </h3>
-	<?php
-	$id=$w_user['id'];
-	$dir    = '__DIR__."/../../dropbox"';
-	$files1 = scandir($dir);
-	$chemin= 'easyhr2/dropbox/'.$id.'Javascript_-_l.pdf';
 
-	print_r($files1);
-	foreach ($files1 as $key => $value):?>
-	<a href="<?= $this->url('dropbox') ?>">
+					<?php foreach ($files as $key => $value):?>
 
-	<?php 
-	echo '<br>';
-	echo $value; 
-	echo '</br>';?>
-	</a>
-	<?php endforeach;
-	?>
-	</div>
-	</div>
-	</div>
-	</div>
+					<a href="<?= $this->url('dropbox', ['id' => $id]) ?>">
+
+					<?php 
+					echo '<br>';
+					echo $value; 
+					echo '</br>';?>
+					</a>
+					<?php endforeach;?>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 <?php $this->stop('main_content') ?>

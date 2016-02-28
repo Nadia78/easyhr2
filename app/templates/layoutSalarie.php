@@ -55,11 +55,6 @@
 
 					</li>
 					<li><a href="#">Documents</a>
-						<ul>
-							<li><a href="#">Fiches de paie</a></li>
-							<li><a href="#">Attestation fiscal</a></li>
-							<li><a href="#">Mutuelle</a></li>
-						</ul>
 					</li>
 					<li><a href="#">Formations</a>
 						<ul>
