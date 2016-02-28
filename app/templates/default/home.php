@@ -83,7 +83,7 @@
             <div class="container">
                 <div class="row">
                     <div  id="about" class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading"><!-- Easy HR --></h1>
+                        <h1 class="brand-heading">Easy HR</h1>
                         <p class="intro-text">Simplifier les ressources humaines ! </p>
 
                         <?php if (isset($errors['login'])) :?>

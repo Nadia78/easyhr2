@@ -147,8 +147,8 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/digital.jpg) no-repeat bottom center scroll;
-    background-color: rvb(81,201,210);
+    background: url(../img/imageFond.jpg) no-repeat bottom center scroll;
+    background-color: rvb(250,250,250);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
