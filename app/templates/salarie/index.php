@@ -17,9 +17,9 @@
 		<div>	
 		
 		<ul>
-				<li>$numberCG  jours de congés payées.</li>
-				<li>$numberRTT jours de RTT.</li>
-				<li>numberF heures de formation.</li>
+				<li><?= $this->e($w_user['cp'])?>  jours de congés payées.</li>
+				<li><?= $this->e($w_user['rtt'])?> jours de RTT.</li>
+				<li><?= $this->e($w_user['formation'])?> heures de formation.</li>
 
 		</ul>
 
