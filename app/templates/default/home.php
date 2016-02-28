@@ -30,6 +30,7 @@
 
 </head>
 
+
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
@@ -40,7 +41,8 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Easy</span> HR
+                    <!-- Helper img ne fonctionne pas  -->
+                    <i class="fa fa-play-circle"></i>  <span class="light"><img src="img/logo4.png"></span>
                 </a>
             </div>
 
@@ -215,6 +217,7 @@
         <div class="container text-center">
             <p>Copyright &copy; Your Website 2014</p>
         </div>
+    
 
         <!-- chargement des scripts -->
         <script src="<?= $this->assetUrl('js/jquery-2.1.4.min.js') ?>"></script>

@@ -43,7 +43,7 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8 col-md-offset-3">
 				
 				<ul id="menu-demo2">
 					<li><a href="#">General</a>
@@ -75,7 +75,7 @@
 					</li>
 				</ul>
 			</div>
-			<a href="<?= $this->url('logout');?>">Déconexion</a>
+			<a href="<?= $this->url('logout');?>">Déconnexion</a>
 		</div>
 	</div>
 
