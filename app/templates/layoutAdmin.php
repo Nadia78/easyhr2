@@ -54,7 +54,7 @@
 					</li>
 				</ul>
 			</div>
-				<a href="<?= $this->url('logout');?>">Déconexion</a>
+				<a href="<?= $this->url('logout');?>">Déconnexion</a>
 		</div>
 	</div>
 

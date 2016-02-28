@@ -78,7 +78,7 @@
 			<a href="<?= $this->url('logout');?>">Déconnexion</a>
 		</div>
 		</div>
-		<div id='calendar'>
-</div>
+		<div id='calendar'></div>
+		<?= $this->section('main_content') ?>
 </body>
 </html>
