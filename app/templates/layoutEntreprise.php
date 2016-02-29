@@ -37,7 +37,7 @@
 <body>
 	<div class="page-header">
 		
-	  <h3>Bienvenue <?= $this->e($w_user['firstname'])?> dans l'espace $nom de l'entreprise de EasyHr<img src="#"></h3>
+	  <a href="<?= $this->url('home');?>">Accueil</a><h3>Bienvenue <?= $this->e($w_user['firstname'])?> dans l'espace $nom de l'entreprise de EasyHr<img src="#"></h3>
 	</div>
 
 	<div class="container">
@@ -78,7 +78,10 @@
 			<a href="<?= $this->url('logout');?>">Déconnexion</a>
 		</div>
 		</div>
-		<div id='calendar'></div>
+		<div id='calendar'></div><br>
+		<div id='suitecalendar'>
+		<a href="../calendar" target="_blank">Ouvrir le calendrier</a>
+		</div>
 		<?= $this->section('main_content') ?>
 </body>
 </html>

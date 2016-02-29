@@ -42,8 +42,7 @@
 		</div>
 	
 		<h3>Ci-dessous la liste de vos documents </h3>
-
-					<?php foreach ($files as $key => $value):?>
+					<?php foreach ($files as $key =>$value):?>
 						<a class="documentLink" target="_blank" href="<?='../dropbox/'.$w_user['id'].'/'.$value; ?>" >
 							<?= $value; ?> 
 						</a>

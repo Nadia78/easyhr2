@@ -42,7 +42,7 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
                     <!-- Helper img ne fonctionne pas  -->
-                    <i class="fa fa-play-circle"></i>  <span class="light"><img src="img/logo4.png"></span>
+                    <i class="fa fa-play-circle"></i>  <span class="light"><img id='logo'src="<?= $this->assetUrl('img/logo4.png') ?>"></span>
                 </a>
             </div>
 
