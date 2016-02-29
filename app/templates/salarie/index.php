@@ -44,18 +44,14 @@
 		<h3>Ci-dessous la liste de vos documents </h3>
 
 					<?php foreach ($files as $key => $value):?>
-
-					<a href="<?= $this->url('dropbox', ['id' => $id]) ?>">
-
-					<?php 
-					echo '<br>';
-					echo $value; 
-					echo '</br>';?>
-					</a>
+						<a class="documentLink" target="_blank" href="<?='../dropbox/'.$w_user['id'].'/'.$value; ?>" >
+							<?= $value; ?> 
+						</a>
+						<br />
 					<?php endforeach;?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-<?php $this->stop('main_content') ?>
+<?php $this->stop('main_content'); ?>
