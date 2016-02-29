@@ -37,7 +37,7 @@
 <body>
 	<div class="page-header">
 		
-	  <h3>Bienvenue <?= $this->e($w_user['firstname'])?>dans l'espace $nom de l'entreprise de EasyHr<img src="#"></h3>
+	  <h3>Bienvenue <?= $this->e($w_user['firstname'])?> dans l'espace $nom de l'entreprise de EasyHr<img src="#"></h3>
 	</div>
 
 	<div class="container">
