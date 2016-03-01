@@ -75,19 +75,15 @@
 			<div>
 			<h3>Documents fiscaux et sociaux</h3>
 				<ul>
-					<li><a href="">DADS</a></li>
-					<li><a href="">Liasse Fiscale</a></li>
-					<li><a href="">Compte de résultat Mutuelle</a></li>
+					<li><a href="../../dropboxEntreprise">DADS</a></li>
+					<li><a href="../../dropboxEntreprise">Liasse Fiscale</a></li>
+					<li><a href="../../dropboxEntreprise">Compte de résultat Mutuelle</a></li>
 				</ul>
 			</div>
 		
 			</div>
 		</div>
 </div>
-
-
-
-			
 
 
 <?php $this->stop('main_content') ?>
