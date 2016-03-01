@@ -72,10 +72,21 @@
 				 <TD> générale </TD> 
 			  </TR> 
 			</TABLE>
+			<div>
+			<h3>Documents fiscaux et sociaux</h3>
+				<ul>
+					<li><a href="">DADS</a></li>
+					<li><a href="">Liasse Fiscale</a></li>
+					<li><a href="">Compte de résultat Mutuelle</a></li>
+				</ul>
+			</div>
 		
 			</div>
 		</div>
 </div>
+
+
+
 			
 
 
