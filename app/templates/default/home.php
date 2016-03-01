@@ -40,9 +40,9 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a alt="bouton pour revenir au départ" class="navbar-brand page-scroll" href="#page-top">
                     <!-- Helper img ne fonctionne pas  -->
-                    <i class="fa fa-play-circle"></i>  <span class="light"><img id='logo'src="<?= $this->assetUrl('img/logo4.png') ?>"></span>
+                    <i class="fa fa-play-circle"></i>  <span class="light"><img alt="logo easyhr"id='logo'src="<?= $this->assetUrl('img/logo4.png') ?>"></span>
                 </a>
             </div>
 
@@ -55,16 +55,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#page-top">Accueil</a>
+                        <a alt="lien vers page accueil"class="page-scroll" href="#page-top">Accueil</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#apropos">A propos</a>
+                        <a alt="lien vers a propos" class="page-scroll" href="#apropos">A propos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#actualites">Actualités</a>
+                        <a alt="lien vers l'actualité" class="page-scroll" href="#actualites">Actualités</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a alt="lien vers contact" class="page-scroll" href="#contact">Contact</a>
                     </li>
                     
                 </ul>
