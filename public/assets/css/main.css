@@ -29,7 +29,7 @@ h1{
 #table {
 	width: 1500px;
 	height: 1000px;
-	margin: % 30%;
+	margin:  30%;
 
 }
 #calendar {
@@ -54,4 +54,10 @@ h3{
 #logo {
 	width: 100px;
 	height: 35px;
+}
+#table2 td {
+	padding: 10px;
+}
+#table2 th {
+	text-align: center;
 }

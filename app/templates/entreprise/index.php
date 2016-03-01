@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-md-9 col-md-offset-4">
 			<h3>Informations générales</h3>
-			<TABLE BORDER="1"> 
+			<TABLE id="table2" BORDER="1"> 
 			  <CAPTION> Détails par employé</CAPTION> 
 			  <TR> 
 				 <TH> Noms </TH> 
@@ -24,6 +24,51 @@
 				 <TD> 1 </TD> 
 				 <TD> Arrêt Maladie </TD> 
 				 <TD> 12 </TD> 
+				 <TD> générale </TD> 
+			  </TR> 
+			  <TR> 
+			  <!-- echo $nom -->
+				 <TD> Mme Laura LEMERCIER </TD> 
+			 	 <TD> Salaire </TD> 
+				 <TD> 1 </TD> 
+				 <TD> Arrêt Maladie </TD> 
+				 <TD> 2 </TD> 
+				 <TD> générale </TD> 
+			  </TR> 
+			  <TR> 
+			  <!-- echo $nom -->
+				 <TD> Mr Adam WALID</TD> 
+			 	 <TD> Salaire </TD> 
+				 <TD> 2 </TD> 
+				 <TD> Congés </TD> 
+				 <TD> 3 </TD> 
+				 <TD> générale </TD> 
+			  </TR> 
+			  			  <TR> 
+			  <!-- echo $nom -->
+				 <TD> Mme Suzanne  </TD> 
+			 	 <TD> Salaire </TD> 
+				 <TD> 1 </TD> 
+				 <TD> Arrêt Maladie </TD> 
+				 <TD> 2 </TD> 
+				 <TD> générale </TD> 
+			  </TR> 
+			  <TR> 
+			  <!-- echo $nom -->
+				 <TD> Mr Juste LEBON </TD> 
+			 	 <TD> Salaire </TD> 
+				 <TD> 1 </TD> 
+				 <TD> Congé </TD> 
+				 <TD> 2 </TD> 
+				 <TD> générale </TD> 
+			  </TR> 
+			  <TR> 
+			  <!-- echo $nom -->
+				 <TD> Mr Gérard FRANC</TD> 
+			 	 <TD> Salaire </TD> 
+				 <TD> 1 </TD> 
+				 <TD> RTT </TD> 
+				 <TD> 2 </TD> 
 				 <TD> générale </TD> 
 			  </TR> 
 			</TABLE>
