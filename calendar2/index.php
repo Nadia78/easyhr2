@@ -8,7 +8,7 @@
 	
 	#calendarSalarie {
 		position: absolute;
-		/*left:-170px;*/
+		left:-170px;
 		width: 20px;
 		height: 20px;
 		top: 0px;
@@ -19,7 +19,7 @@
 	<?php
 	/*$message= 'ça marche';
 	mail('environnement.eau@gmail.com', 'Mon Sujet', $message);*/
-	$calendar=  file_get_contents('../calendar');
+	$calendar=  file_get_contents('../calendar/index.html');
 	echo $calendar;
 	//file_get_contents('www.google.fr');
 	?>
