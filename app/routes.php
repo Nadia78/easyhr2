@@ -20,11 +20,15 @@
 		
 		['POST', '/loginUser/', 'Login#loginUser', 'loginUser'],
 		['GET', '/logout/', 'Login#logout', 'logout'],
+		
+		['GET', '/documents/', 'Default#documents', 'documents'],
 
 		['GET', '/register/', 'Register#index', 'register'],
 		['POST', '/registerUser/', 'Register#registerUser', 'registerUser'],
 
 		['GET', '/private/', 'Default#privateHome', 'privateHome'],
 		['GET', '/bo/', 'Default#backOffice', 'bo'],
+
+
 
 	);
