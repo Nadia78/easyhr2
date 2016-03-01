@@ -186,8 +186,9 @@
                 <label for=" " id="">Email</label>
                 <input type="text" id="" name="" class="form-control"></div>
                 <div class="form-group">
-                <label for=" " id="">Message</label>
-                <input type="textarea" id="" name="" class="form-control" cols=""></div>
+                 <label for=" " id="">Message</label>
+                <textarea type="textarea" id="" name="" class="form-control" rows="5">Message</textarea>
+                </div>
                 <button class="btn btn-success">Envoyer</button>
                 </form>
                 <p><a href="mailto:contact@easyhr.com">contact@easyhr.com</a>

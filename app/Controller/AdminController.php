@@ -36,7 +36,7 @@ class AdminController extends Controller
 		$firstname=trim(htmlentities($_POST['firstname']));
 		$lastname=trim(htmlentities($_POST['lastname']));
 		
-		debug($_POST);
+		// debug($_POST);
 
 		// initialisation d'un tableau d'erreurs
 		$errors = [];

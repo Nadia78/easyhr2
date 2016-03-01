@@ -20,6 +20,12 @@ class SalarieController extends Controller
 		$this->show('salarie/index', ['files'=>$files]);
 	}
 
+	public function index2()
+	{
+		$this->show('salarie/notifs');
+	}
+
+
 	public function loginUser() {
 
 		// affecter une variable à chaque valeur clé

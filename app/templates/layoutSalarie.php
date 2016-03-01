@@ -47,7 +47,7 @@
 				<ul id="menu-demo2">
 					<li><a href="#">Demande Specifique</a>
 						<ul>
-							<li><a href="#">Notifications</a></li>				
+							<li><a href="<?= $this->url('notifs');?>">Notifications</a></li>				
 						</ul>
 					</li>
 					<li><a href="#">Gestion du temps</a>
